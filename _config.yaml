@@ -1,14 +1,14 @@
 # site properties and page defaults
-title: WooHyuna
+title: Noh Lab @ KIT
 subtitle: 
-description: An engaging 1-3 sentence description of your lab.
+description: We are a Hydrology and Water Resources Lab (Noh Lab) at Civil Engineering Department at Kumoh National Institute of Technology. Our aim is to explore and characterize complexity and uncertainty in hydrology and water resources systems to improve both our understanding of these systems and our ability to respond to water-related hazards under changing climate conditions.
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
 
 # site social media and other links
 links:
-  email: contact@WooHyuna.com
+  email: seongjin.noh@gmail.com
   orcid: 0000-0001-8713-9213
   google-scholar: ETJoidYAAAAJ
   github: WooHyuna
