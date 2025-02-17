@@ -7,4 +7,8 @@ links:
   email: seongjin.noh@kumoh.ac.kr
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+* Bachelor, Seoul National University
+* Master, Seoul National University
+* PhD, Kyoto University
+* Research Assistant Professor, University of Texas at Arlington
+* 수석연구원 한국건설기술연구원 (KICT)
