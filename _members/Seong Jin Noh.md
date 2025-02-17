@@ -1,6 +1,6 @@
 ---
 name: Seong Jin Noh
-image: images/photo.jpg
+image: images/Team/seongjin_noh.JPG
 description: Principal Investigator
 role: Associate professor
 links:
