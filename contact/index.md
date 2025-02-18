@@ -7,27 +7,26 @@ nav:
 
 # {% include icon.html icon="fa-regular fa-envelope" %}Contact
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+박사과정, 석사과정, 학부 연구생 모집합니다
+We are looking for new PhD, Master, Bachelor students to join the team!
 
 {%
   include button.html
   type="email"
-  text="jane@smith.com"
-  link="jane@smith.com"
+  text="seongjin.noh@kumoh.ac.kr"
+  link="seongjin.noh@kumoh.ac.kr"
 %}
 {%
   include button.html
   type="phone"
-  text="(555) 867-5309"
-  link="+1-555-867-5309"
+  text="(+82)-54-478-7621"
+  link="(+82)-54-478-7621"
 %}
 {%
   include button.html
   type="address"
-  tooltip="Our location on Google Maps for easy navigation"
-  link="https://www.google.com/maps"
+  tooltip="Room 302, Bldg. Global, Kumoh National Institute of Technology 61, Daehak-ro, Gumi-si, Gyeongsangbuk-do, Republic of Korea"
+  link="https://www.google.com/maps](https://maps.app.goo.gl/hfpLMf7GiugaUHKC9"
 %}
 
 {% include section.html %}
