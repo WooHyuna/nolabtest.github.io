@@ -1,0 +1,24 @@
+.blog-post {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+/* 🔹 갤러리 스타일 */
+.post-gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.post-gallery img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.post-gallery img:hover {
+  transform: scale(1.1);
+}
