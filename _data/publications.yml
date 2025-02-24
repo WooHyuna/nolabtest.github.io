@@ -64,17 +64,11 @@
   link: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002928507"
   journal: "J. KSCE, 43(1), 43-54 (2023)"
 
- - title: "Enhancing tidal wave predictions at the estuary of the Nakdong-River using fixed-lag smoother"
+- title: "Enhancing tidal wave predictions at the estuary of the Nakdong-River using fixed-lag smoother"
   authors: "Choi, H., Kim, B., Lee, G., Noh, S. J."
   year: 2023
   link: "https://www.mdpi.com/1996-1073/16/1/237"
   journal: "Energies, 16(1), 237 (2023)"
-
-- title: "A review on urban inundation modeling research in South Korea: 2001-2022"
-  authors: "Lee, S., Kim, B., Choi, H., Noh, S. J."
-  year: 2022
-  link: "https://jkwra.or.kr/articles/article/PYKz/"
-  journal: "J. Korea Water Resour. Assoc., 55(10), 707-721 (2022)"
 
 - title: "Comparative assessment and uncertainty analysis of ensemble-based hydrologic data assimilation using airGRdatassim"
   authors: "Lee, G., Kim, B., Lee, S., Woo, D. K., Noh, S. J."
