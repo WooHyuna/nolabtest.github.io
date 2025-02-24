@@ -64,8 +64,207 @@
   link: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002928507"
   journal: "J. KSCE, 43(1), 43-54 (2023)"
 
-- title: "Enhancing tidal wave predictions at the estuary of the Nakdong-River using fixed-lag smoother"
+ - title: "Enhancing tidal wave predictions at the estuary of the Nakdong-River using fixed-lag smoother"
   authors: "Choi, H., Kim, B., Lee, G., Noh, S. J."
   year: 2023
   link: "https://www.mdpi.com/1996-1073/16/1/237"
   journal: "Energies, 16(1), 237 (2023)"
+
+- title: "A review on urban inundation modeling research in South Korea: 2001-2022"
+  authors: "Lee, S., Kim, B., Choi, H., Noh, S. J."
+  year: 2022
+  link: "https://jkwra.or.kr/articles/article/PYKz/"
+  journal: "J. Korea Water Resour. Assoc., 55(10), 707-721 (2022)"
+
+- title: "Comparative assessment and uncertainty analysis of ensemble-based hydrologic data assimilation using airGRdatassim"
+  authors: "Lee, G., Kim, B., Lee, S., Woo, D. K., Noh, S. J."
+  year: 2022
+  link: "https://jkwra.or.kr/articles/article/GvMX/"
+  journal: "J. Korea Water Resour. Assoc., 55(10), 761-774 (2022)" 
+
+- title: "A review on urban inundation modeling research in South Korea: 2001-2022"
+  authors: "Lee, S., Kim, B., Choi, H., Noh, S. J."
+  year: 2022
+  link: "https://jkwra.or.kr/articles/article/PYKz/"
+  journal: "J. Korea Water Resour. Assoc., 55(10), 707-721 (2022)"
+
+- title: "Development and application of integrated indicators for assessing the water resources performance of multi-purpose and water supply dams"
+  authors: "Sung, J., Kang, B., Kim, B., Noh, S. J."
+  year: 2022
+  link: "https://jkwra.or.kr/articles/article/OzXa/"
+  journal: "J. Korea Water Resour. Assoc., 55(9), 687-700 (2022)"
+
+- title: "Retrospective analysis of the urban inundation and the impact assessment of the flood barrier using H12 model"
+  authors: "Kim, B., Noh, S. J., Lee, S."
+  year: 2022
+  link: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002843493"
+  journal: "J. Korea Water Resour. Assoc., 55(5), 345-356 (2022)"
+
+- title: "Improving flood forecasting using conditional bias-aware assimilation of streamflow observations and dynamic assessment of flow-dependent information content"
+  authors: "Shen, H., Seo, D.-J., Lee, H., Liu, Y., Noh, S. J."
+  year: 2022
+  link: "https://www.sciencedirect.com/science/article/pii/S002216942101297X"
+  journal: "Journal of Hydrology 605, 127247 (2022)"
+
+- title: "Ensemble streamflow data assimilation using WRF-Hydro and DART: novel localization and inflation techniques applied to Hurricane Florence flooding"
+  authors: "El Gharamti, M., McCreight, J. L., Noh, S. J., Hoar, T. J., RafieeiNasab, A., Johnson, B. K."
+  year: 2021
+  link: "https://hess.copernicus.org/articles/25/5315/2021/"
+  journal: "Hydrology and Earth System Sciences 25, 5315 (2021)"
+
+- title: "High-resolution modeling and prediction of urban floods using WRF-Hydro and data assimilation"
+  authors: "Kim, S., Shen, H., Noh, S. J., Seo, D.-J., Welles, E., Pelgrim, E., Weerts, A., Lyons, E., Philips, B."
+  year: 2021
+  link: "https://doi.org/10.1016/j.jhydrol.2021.126236"
+  journal: "Journal of Hydrology 598, 126236 (2021)"
+
+- title: "Identification of Inundation Using Low-Resolution Images from Traffic-Monitoring Cameras: Bayes Shrink and Bayesian Segmentation"
+  authors: "Wu, Y.C., Noh, S.J., Ham, S."
+  year: 2020
+  link: "https://doi.org/10.3390/w12061725"
+  journal: "Water 12, 1725 (2020)"
+
+- title: "Improving Multisensor Precipitation Estimation via Adaptive Conditional Bias-Penalized Merging of Rain Gauge Data and Remotely-Sensed Quantitative Precipitation Estimates"
+  authors: "Jozaghi, A., Nabatian, M., Noh, S. J., Seo, D.-J., Tang, L., Zhang, J."
+  year: 2020
+  link: "https://doi.org/10.1175/JHM-D-19-0129.1"
+  journal: "Journal of Hydrometeorology 20, 2347 (2019)"
+
+- title: "Improving flood forecasting using conditional bias-penalized ensemble Kalman filter"
+  authors: "Lee, H., Shen, H., Noh, S. J., Kim, S., Seo, D.-J., Zhang, Y."
+  year: 2019
+  link: "https://doi.org/10.1016/j.jhydrol.2019.05.072"
+  journal: "J. Hydrol. 575, 596 (2019)"
+
+- title: "Retrospective dynamic inundation mapping of Hurricane Harvey flooding in the Houston metropolitan area using high-resolution modelling"
+  authors: "Noh, S. J., Lee, H., Lee, S., Seo, D.-J."
+  year: 2019
+  link: "https://doi.org/10.3390/w11030597"
+  journal: "Water 11(3), 597 (2019)"
+
+- title: "High-Resolution Hydrologic Forecasting for Very Large Urban Areas"
+  authors: "Habibi, H., Dasgupta, I., Noh, S. J., Kim, S., Zink, M., Seo, D.-J., Bartos, M., and Kerkez, B."
+  year: 2019
+  link: "https://doi.org/10.2166/hydro.2019.100"
+  journal: "Journal of Hydroinformatics 21(3), 441 (2019)"
+
+- title: "Hyper-resolution 1D-2D urban flood modelling using LiDAR data and hybrid parallelization"
+  authors: "Noh, S. J., Lee, J., Lee, S., Kawaike, K., Seo, D.-J."
+  year: 2018
+  link: "https://doi.org/10.1016/j.envsoft.2018.02.008"
+  journal: "Environmental Modelling and Software 103, 131 (2018)"
+
+- title: "Real-time assimilation of streamflow observations into a hydrologic routing model: Effects of model structures and updating methods"
+  authors: "Mazzoleni, M., Noh, S. J.*, Lee, H., Liu, Y., Seo, D. J., Amaranto, A., Alfonso, L., Solomatine, D. P."
+  year: 2018
+  link: "https://doi.org/10.1080/02626667.2018.1430898"
+  journal: "Hydrological Sciences Journal 63, 385 (2018)"
+
+- title: "Data assimilation in hydrologic routing: impact of model error and sensor placement on flood forecasting"
+  authors: "Mazzoleni, M., Chacon-Hurtado, J, Noh, S. J., Seo, D.-J., Alfonso, L, Solomatine, D."
+  year: 2018
+  link: "https://doi.org/10.1061/(ASCE)HE.1943-5584.0001656"
+  journal: "J. Hydrol. Eng. 23(6), 1943 (2018)"
+
+- title: "Improving multisensor estimation of heavy-to-extreme precipitation via conditional bias-penalized optimal estimation"
+  authors: "Kim, B., Seo, D.-J., Noh, S. J., Prat, O. P., Nelson, B. R."
+  year: 2018
+  link: "https://doi.org/10.1016/j.jhydrol.2016.10.052"
+  journal: "J. Hydrol. 556, 1096 (2018)"
+
+- title: "Improving flood forecasting using conditional bias-penalized ensemble Kalman filter"
+  authors: "Lee, H., Shen, H., Noh, S. J., Kim, S., Seo, D.-J., Zhang, Y."
+  year: 2019
+  link: "https://doi.org/10.1016/j.jhydrol.2019.05.072"
+  journal: "J. Hydrol. 575, 596 (2019)"
+
+- title: "Retrospective dynamic inundation mapping of Hurricane Harvey flooding in the Houston metropolitan area using high-resolution modelling"
+  authors: "Noh, S. J., Lee, H., Lee, S., Seo, D.-J."
+  year: 2019
+  link: "https://doi.org/10.3390/w11030597"
+  journal: "Water 11(3), 597 (2019)"
+
+- title: "Toward parsimonious modeling of frequency of areal runoff from heavy-to-extreme precipitation in large urban areas under changing conditions: a derived moment approach"
+  authors: "Norouzi, A., Habibi, H., Nazari, B., Noh, S. J., Seo, D.-J., Zhang, Y."
+  year: 2019
+  link: "https://doi.org/10.1007/s00477-019-01698-8"
+  journal: "SERRA 33, 1263 (2019)"
+
+- title: "High-Resolution Hydrologic Forecasting for Very Large Urban Areas"
+  authors: "Habibi, H., Dasgupta, I., Noh, S. J., Kim, S., Zink, M., Seo, D.-J., Bartos, M., and Kerkez, B."
+  year: 2019
+  link: "https://doi.org/10.2166/hydro.2019.100"
+  journal: "Journal of Hydroinformatics 21(3), 441 (2019)"
+
+- title: "Hyper-resolution 1D-2D urban flood modelling using LiDAR data and hybrid parallelization"
+  authors: "Noh, S. J., Lee, J., Lee, S., Kawaike, K., Seo, D.-J."
+  year: 2018
+  link: "https://doi.org/10.1016/j.envsoft.2018.02.008"
+  journal: "Environmental Modelling and Software 103, 131 (2018)"
+
+- title: "Hybrid numerical scheme of Preissmann Slot Model for Transient Mixed Flows"
+  authors: "An, H., Lee, S., Noh, S. J., Kim, Y., Noh, J."
+  year: 2018
+  link: "https://doi.org/10.3390/w10070899"
+  journal: "Water 10(7), 899 (2018)"
+
+- title: "Real-time assimilation of streamflow observations into a hydrologic routing model: Effects of model structures and updating methods"
+  authors: "Mazzoleni, M., Noh, S. J.*, Lee, H., Liu, Y., Seo, D. J., Amaranto, A., Alfonso, L., Solomatine, D. P."
+  year: 2018
+  link: "https://doi.org/10.1080/02626667.2018.1430898"
+  journal: "Hydrological Sciences Journal 63, 385 (2018)"
+
+- title: "Data assimilation in hydrologic routing: impact of model error and sensor placement on flood forecasting"
+  authors: "Mazzoleni, M., Chacon-Hurtado, J, Noh, S. J., Seo, D.-J., Alfonso, L, Solomatine, D."
+  year: 2018
+  link: "https://doi.org/10.1061/(ASCE)HE.1943-5584.0001656"
+  journal: "J. Hydrol. Eng. 23(6), 1943 (2018)"
+
+- title: "Improving multisensor estimation of heavy-to-extreme precipitation via conditional bias-penalized optimal estimation"
+  authors: "Kim, B., Seo, D.-J., Noh, S. J., Prat, O. P., Nelson, B. R."
+  year: 2018
+  link: "https://doi.org/10.1016/j.jhydrol.2016.10.052"
+  journal: "J. Hydrol. 556, 1096 (2018)"
+
+- title: "Merging Real-Time Channel Sensor Networks with Continental-Scale Hydrologic Models: A Data Assimilation Approach for Improving Accuracy in Flood Depth Predictions"
+  authors: "Javaheri, A., Nabatian, M., Omranian, E., Babbar-Sebens, M., Noh, S. J."
+  year: 2018
+  link: "https://doi.org/10.3390/hydrology5010009"
+  journal: "Hydrology 5(1), 9 (2018)"
+
+- title: "Flow vector analysis methods for a pressure sensor network on a steep hillslope"
+  authors: "Gwak, Y., Kim, S., Lee, K., Noh, S. J., An, H."
+  year: 2017
+  link: "https://doi.org/10.2136/vzj2016.12.0122"
+  journal: "Vadose Zone Journal 16(8) (2017)"
+
+- title: "Ensemble urban flood simulation in comparison with laboratory-scale experiments: Impact of interaction models for manhole, sewer pipe, and surface flow"
+  authors: "Noh, S. J., Lee, S., An, H., Kawaike, K., Nakagawa, H."
+  year: 2016
+  link: "https://doi.org/10.1016/j.advwatres.2016.08.015"
+  journal: "Adv. Water Resour. 97, 25 (2016)"
+
+- title: "A weakly-constrained data assimilation approach to address rainfall-runoff model structural inadequacy in streamflow prediction"
+  authors: "Lee, H., Seo, D.-J., Noh, S. J."
+  year: 2016
+  link: "https://doi.org/10.1016/j.jhydrol.2016.09.009"
+  journal: "J. Hydrol. 542, 373 (2016)"
+
+- title: "Development of time-variant landslide-prediction software considering three-dimensional subsurface unsaturated flow"
+  authors: "An, H., Viet, T., Lee, G., Kim, Y., Kim, M., Noh, S. J., Noh, J."
+  year: 2016
+  link: "https://doi.org/10.1016/j.envsoft.2016.08.009"
+  journal: "Environmental Modelling & Software 85, 172 (2016)"
+
+- title: "Simulation of soil moisture on a hillslope using multiple hydrologic models in comparison to field measurements"
+  authors: "Noh, S. J., An, H., Kim, S., Kim, H. J."
+  year: 2015
+  link: "https://doi.org/10.1016/j.jhydrol.2015.01.047"
+  journal: "J. Hydrol. 523, 342 (2015)"
+
+- title: "Performance of a rain barrel sharing network under climate change"
+  authors: "Noh, S. J., Chung, E. S., Seo, Y."
+  year: 2015
+  link: "https://doi.org/10.3390/w7073466"
+  journal: "Water 7, 3466 (2015)"
+
