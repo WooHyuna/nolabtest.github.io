@@ -2,46 +2,22 @@
   authors: "Lee, G., Woo, D. K., Noh, S. J."
   year: 2024
   link: "https://jkwra.or.kr/articles/article/JGEX/"
-  journal: "J. Korea Water Resour. Assoc., 57(9), 585-598 (2024)"
+  journal: "J. Korea Water Resour. Assoc."
+  volume: "57(9)"
+  pages: "585-598"
 
 - title: "Climate change impact assessment on water resources management using a combined multi-model approach in South Korea"
   authors: "Noh, S. J., Lee, G., Kim, B., Lee, S., Joe, J., Woo, D. K."
   year: 2024
   link: "https://doi.org/10.1016/j.ejrh.2024.101842"
-  journal: "Journal of Hydrology: Regional Studies, 53, 1018427 (2024)"
+  journal: "Journal of Hydrology: Regional Studies"
+  volume: "53"
+  pages: "1018427"
 
 - title: "High-resolution medium-range streamflow prediction using distributed hydrological model WRF-Hydro and numerical weather forecast GDAPS"
   authors: "Kim, S., Kim, B., Lee, G., Lee, Y., Noh, S. J."
   year: 2024
   link: "https://jkwra.or.kr/articles/article/mxyg/"
-  journal: "J. Korea Water Resour. Assoc., 57(5), 333-346 (2024)"
-
-- title: "Development and application of cellular automata-based urban inundation and water cycle model CAW"
-  authors: "Lee, S., Choi, H., Woo, H., Kim, M., Noh, S. J."
-  year: 2024
-  link: "https://jkwra.or.kr/articles/article/ym1P/"
-  journal: "J. Korea Water Resour. Assoc., 57(3), 165-179 (2024)"
-
-- title: "Assessment of the Impact of Spatial Variability on Streamflow Predictions Using High-Resolution Modeling and Parameter Estimation: Case Study of Geumho River Catchment, South Korea"
-  authors: "Kim, B., Lee, G., Lee, Y., Kim, S., Noh, S. J."
-  year: 2024
-  link: "https://www.mdpi.com/2073-4441/16/4/591"
-  journal: "Water, 16(4), 591 (2024)"
-
-- title: "Applying deep learning based super-resolution technique for high-resolution urban flood analysis"
-  authors: "Choi, H., Lee, S., Woo, H., Kim, M., Noh, S. J."
-  year: 2023
-  link: "https://jkwra.or.kr/articles/article/GDEP/"
-  journal: "J. Korea Water Resour. Assoc., 56(10), 641-653 (2023)"
-
-- title: "Climate change impact analysis on water supply reliability and flood risk using combined rainfall-runoff and reservoir operation modeling: Hapcheon-Dam catchment case"
-  authors: "Noh, S. J., Lee, G., Kim, B., Jo, J., Woo, D. K."
-  year: 2023
-  link: "https://jkwra.or.kr/articles/article/gY25/"
-  journal: "J. Korea Water Resour. Assoc., 56(11), 765-774 (2023)"
-
-- title: "High-resolution Urban Flood Modeling using Cellular Automata-based CADDIES-2D in the Oncheon-cheon Catchment in Busan, South Korea"
-  authors: "Choi, H., Lee, S., Woo, H., Noh, S. J."
-  year: 2023
-  link: "http://journal.auric.kr/jksce/XmlViewer/f424223"
-  journal: "J. KSCE, 43(5), 587-599 (2023)"
+  journal: "J. Korea Water Resour. Assoc."
+  volume: "57(5)"
+  pages: "333-346"
