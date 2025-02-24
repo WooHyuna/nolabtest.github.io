@@ -18,12 +18,17 @@ nav:
 
 {% include search-info.html %}
 
-{% for item in site.data.publications %}
-  {% include citation.html
-    title=item.title
-    authors=item.authors
-    link=item.link
-    journal=item.journal
-    style="rich"
-  %}
+{% assign publications_by_year = site.data.publications | group_by_exp: "pub", "pub.year" | sort: "name" | reverse %}
+
+{% for year in publications_by_year %}
+  <h3>{{ year.name }}</h3> <!-- 연도별 헤더 추가 -->
+  {% for item in year.items %}
+    {% include citation.html
+      title=item.title
+      authors=item.authors
+      link=item.link
+      journal=item.journal
+      style="rich"
+    %}
+  {% endfor %}
 {% endfor %}
