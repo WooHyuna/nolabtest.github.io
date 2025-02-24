@@ -1,0 +1,25 @@
+<div class="gallery">
+  {% for img in include.images | split: ", " %}
+    <a href="{{ img | relative_url }}" target="_blank">
+      <img src="{{ img | relative_url }}" alt="Gallery Image">
+    </a>
+  {% endfor %}
+</div>
+
+<style>
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+</style>
