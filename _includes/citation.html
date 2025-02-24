@@ -1,4 +1,3 @@
-
 {% if include.lookup %}
   {% assign citation = site.data.citations
     | where_exp: "citation",
@@ -11,26 +10,6 @@
 
 <div class="citation-container">
   <div class="citation">
-    
-    <!-- 🔹 이미지 제거됨 -->
-    {%- comment -%}
-    {% if include.style == "rich" %}
-      <a
-        {% if citation.link %}
-          href="{{ citation.link | relative_url | uri_escape }}"
-        {% endif %}
-        class="citation-image"
-        aria-label="{{ citation.title | default: "citation link" | regex_strip }}"
-      >
-        <img
-          src="{{ citation.image | relative_url | uri_escape }}"
-          alt="{{ citation.title | default: "citation image" | regex_strip }}"
-          loading="lazy"
-          {% include fallback.html %}
-        >
-      </a>
-    {% endif %}
-    {%- endcomment -%}
 
     <div class="citation-text">
       {% assign type = site.data.types[citation.type] %}
@@ -57,17 +36,17 @@
         }}
       </div>
 
-      <!-- 🔹 불필요한 정보 제거 & 저널 정보만 남김 -->
+      <!-- 🔹 저널 정보 -->
       <div class="citation-details">
         {% if citation.journal %}
           <span class="citation-journal">
-            {{ citation.journal }}
+            📖 {{ citation.journal }}
           </span>
         {% endif %}
 
         {% if citation.link %}
           <a href="{{ citation.link | relative_url | uri_escape }}" class="citation-link">
-            [View Paper]
+            🔗 [View Paper]
           </a>
         {% endif %}
       </div>
