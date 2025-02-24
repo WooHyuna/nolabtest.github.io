@@ -17,4 +17,12 @@ International/Domestic Journal/Books/Reports/Articles
 
 {% include search-info.html %}
 
-{% include list.html data="publications" component="citation" style="rich" %}
+{% for item in site.data.publications %}
+  {% include citation.html
+    title=item.title
+    authors=item.authors
+    link=item.link
+    journal=item.journal
+    style="rich"
+  %}
+{% endfor %}
