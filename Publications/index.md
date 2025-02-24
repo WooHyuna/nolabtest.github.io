@@ -6,8 +6,9 @@ nav:
 ---
 
 # 📰 Publications
-
-International/Domestic Journal/Books/Reports/Articles
+<div style="text-align: center; font-size: 1.1em;">
+  International/Domestic Journal/Books/Reports/Articles
+</div>
 
 {% include section.html %}
 
