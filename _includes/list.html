@@ -5,17 +5,13 @@
   | data_filter: include.filter
 %}
 
-{% assign years = data
-  | group_by_exp: "d", "d.date | date: '%Y'"
-  | sort: "name"
-  | reverse
-%}
+{% assign years = data | group_by_exp: "d", "d.date | date: '%Y'" | sort: "name" | reverse %}
 
 {% for year in years %}
   {% assign data = year.items %}
 
   {% if years.size > 1 %}
-    {{--}}<h3 id="{{ year.name }}">{{ year.name }}</h3>
+    <h3 id="{{ year.name }}">{{ year.name }}</h3>
     {% assign data = data | sort: "date" | reverse %}
   {% endif %}
 
@@ -56,4 +52,24 @@
       width=d.width
     %}
   {% endfor %}
+{% endfor %}
+
+<!-- 🔹 블로그 포스트 리스트 추가 -->
+{% for item in site.posts %}
+  <article class="blog-post">
+    <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+    <p>{{ item.excerpt }}</p>
+
+    <!-- 🔹 블로그 포스트 내 갤러리 추가 -->
+    {% if item.gallery %}
+      <div class="post-gallery">
+        {% assign images = item.gallery | split: ", " %}
+        {% for img in images limit: 3 %}
+          <img src="{{ img | relative_url }}" alt="Gallery Image">
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <a href="{{ item.url | relative_url }}">Read more...</a>
+  </article>
 {% endfor %}
