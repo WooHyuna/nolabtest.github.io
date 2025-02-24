@@ -36,17 +36,22 @@
         }}
       </div>
 
+      <!-- 🔹 연도별 구분 추가 -->
+      {% if citation.year %}
+        <h3 class="citation-year">{{ citation.year }}</h3>
+      {% endif %}
+
       <!-- 🔹 저널 정보 -->
       <div class="citation-details">
         {% if citation.journal %}
           <span class="citation-journal">
-            📖 {{ citation.journal }}
+            {{ citation.journal }}
           </span>
         {% endif %}
 
         {% if citation.link %}
           <a href="{{ citation.link | relative_url | uri_escape }}" class="citation-link">
-            🔗 [View Paper]
+            [View Paper]
           </a>
         {% endif %}
       </div>
