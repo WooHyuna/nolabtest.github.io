@@ -1,78 +1,122 @@
 {% assign members = site.members | where_exp: "member", include.filter %}
 
-<div class="team-container">
-  {% for member in members %}
-    <div class="team-member">
-      <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
-      <div class="team-info">
-        <h3>{{ member.name }}</h3>
-        <p><strong>{{ member.role }}</strong></p>
-        <p>{{ member.description }}</p>
-
-        {% if member.links.email %}
-          <p>📧 <a href="mailto:{{ member.links.email }}">{{ member.links.email }}</a></p>
-        {% endif %}
-
-        {% if member.bio %}
-          <div class="team-bio">
-            <h4>About</h4>
-            <p>{{ member.bio | markdownify }}</p>
-          </div>
-        {% endif %}
+{% if include.filter == "member.role == 'PI'" %}
+  <!-- 🔹 PI 섹션 -->
+  <div class="pi-container">
+    {% for member in members %}
+      <div class="pi-member">
+        <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+        <div class="pi-info">
+          <h3>{{ member.name }}</h3>
+          <p><strong>{{ member.role }}</strong></p>
+          <p>{{ member.description }}</p>
+          
+          {% if member.links.email %}
+            <p>📧 <a href="mailto:{{ member.links.email }}">{{ member.links.email }}</a></p>
+          {% endif %}
+          
+          {% if member.bio %}
+            <div class="pi-bio">
+              <h4>About</h4>
+              <p>{{ member.bio | markdownify }}</p>
+            </div>
+          {% endif %}
+        </div>
       </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
+
+{% else %}
+  <!-- 🔹 일반 멤버 (Team Members) -->
+  <div class="team-grid">
+    {% for member in members %}
+      <div class="team-card">
+        <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+        <h4>{{ member.name }}</h4>
+        <p>{{ member.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
 
 <style>
-  .team-container {
+  /* 🔹 PI 스타일 */
+  .pi-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
-    margin-top: 20px;
   }
 
-  .team-member {
+  .pi-member {
     display: flex;
     align-items: center;
     gap: 20px;
-    max-width: 700px;
+    max-width: 800px;
   }
 
-  .team-member img {
-    width: 150px;
+  .pi-member img {
+    width: 200px; /* 🔹 교수님 사진 키움 */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 
-  .team-info {
+  .pi-info {
     flex-grow: 1;
     text-align: left;
   }
 
-  .team-info h3 {
+  .pi-info h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
   }
 
-  .team-info p {
+  .pi-info p {
     margin: 5px 0;
     font-size: 14px;
   }
 
-  .team-info a {
+  .pi-info a {
     color: #007bff;
     text-decoration: none;
   }
 
-  .team-info a:hover {
+  .pi-info a:hover {
     text-decoration: underline;
   }
 
-  .team-bio {
+  .pi-bio {
     margin-top: 10px;
     font-size: 14px;
+  }
+
+  /* 🔹 Team Members 스타일 (사진 아래 이름) */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+
+  .team-card {
+    text-align: center;
+  }
+
+  .team-card img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-card h4 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .team-card p {
+    font-size: 14px;
+    color: #666;
   }
 </style>
