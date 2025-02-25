@@ -536,23 +536,24 @@
 
 <h2 id="principal-investigator-pi">Principal Investigator (PI)</h2>
 
-<div class="team-container">
-  
-    <div class="team-member">
-      <img src="/nolabtest.github.io/images/Team/seongjin_noh.JPG" alt="Seong Jin Noh">
-      <div class="team-info">
-        <h3>Seong Jin Noh</h3>
-        <p><strong>PI</strong></p>
-        <p>Principal Investigator</p>
-
-        
-          <p>📧 <a href="mailto:seongjin.noh@kumoh.ac.kr">seongjin.noh@kumoh.ac.kr</a></p>
-        
-
-        
-          <div class="team-bio">
-            <h4>About</h4>
-            <p></p>
+<p><!-- 🔹 PI 섹션 --></p>
+<div class="pi-container">
+    
+      <div class="pi-member">
+        <img src="/nolabtest.github.io/images/Team/seongjin_noh.JPG" alt="Seong Jin Noh">
+        <div class="pi-info">
+          <h3>Seong Jin Noh</h3>
+          <p><strong>PI</strong></p>
+          <p>Principal Investigator</p>
+          
+          
+            <p>📧 <a href="mailto:seongjin.noh@kumoh.ac.kr">seongjin.noh@kumoh.ac.kr</a></p>
+          
+          
+          
+            <div class="pi-bio">
+              <h4>About</h4>
+              <p></p>
 <ul>
   <li>
 <strong>Bachelor</strong>, Seoul National University</li>
@@ -566,163 +567,199 @@
 <strong>수석연구원</strong>, 한국건설기술연구원 (KICT)</li>
 </ul>
 
-          </div>
-        
+            </div>
+          
+        </div>
       </div>
-    </div>
-  
-</div>
+    
+  </div>
 
 <style>
-  .team-container {
+  /* 🔹 PI 스타일 */
+  .pi-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
-    margin-top: 20px;
   }
 
-  .team-member {
+  .pi-member {
     display: flex;
     align-items: center;
     gap: 20px;
-    max-width: 700px;
+    max-width: 800px;
   }
 
-  .team-member img {
-    width: 150px;
+  .pi-member img {
+    width: 200px; /* 🔹 교수님 사진 키움 */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 
-  .team-info {
+  .pi-info {
     flex-grow: 1;
     text-align: left;
   }
 
-  .team-info h3 {
+  .pi-info h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
   }
 
-  .team-info p {
+  .pi-info p {
     margin: 5px 0;
     font-size: 14px;
   }
 
-  .team-info a {
+  .pi-info a {
     color: #007bff;
     text-decoration: none;
   }
 
-  .team-info a:hover {
+  .pi-info a:hover {
     text-decoration: underline;
   }
 
-  .team-bio {
+  .pi-bio {
     margin-top: 10px;
     font-size: 14px;
+  }
+
+  /* 🔹 Team Members 스타일 (사진 아래 이름) */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+
+  .team-card {
+    text-align: center;
+  }
+
+  .team-card img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-card h4 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .team-card p {
+    font-size: 14px;
+    color: #666;
   }
 </style>
 
 <h2 id="team-members">Team Members</h2>
 
-<div class="team-container">
-  
-    <div class="team-member">
-      <img src="/nolabtest.github.io/images/photo.jpg" alt="Jane Smith">
-      <div class="team-info">
-        <h3>Jane Smith</h3>
-        <p><strong>principal-investigator</strong></p>
+<p><!-- 🔹 일반 멤버 (Team Members) --></p>
+<div class="team-grid">
+    
+      <div class="team-card">
+        <img src="/nolabtest.github.io/images/photo.jpg" alt="Jane Smith">
+        <h4>Jane Smith</h4>
         <p></p>
-
-        
-
-        
       </div>
-    </div>
-  
-    <div class="team-member">
-      <img src="/nolabtest.github.io/images/photo.jpg" alt="John Doe">
-      <div class="team-info">
-        <h3>John Doe</h3>
-        <p><strong>phd</strong></p>
+    
+      <div class="team-card">
+        <img src="/nolabtest.github.io/images/photo.jpg" alt="John Doe">
+        <h4>John Doe</h4>
         <p></p>
-
-        
-
-        
       </div>
-    </div>
-  
-    <div class="team-member">
-      <img src="/nolabtest.github.io/images/photo.jpg" alt="Sarah Johnson">
-      <div class="team-info">
-        <h3>Sarah Johnson</h3>
-        <p><strong>programmer</strong></p>
+    
+      <div class="team-card">
+        <img src="/nolabtest.github.io/images/photo.jpg" alt="Sarah Johnson">
+        <h4>Sarah Johnson</h4>
         <p>Lead Programmer</p>
-
-        
-          <p>📧 <a href="mailto:sarah.johnson@gmail.com">sarah.johnson@gmail.com</a></p>
-        
-
-        
       </div>
-    </div>
-  
-</div>
+    
+  </div>
 
 <style>
-  .team-container {
+  /* 🔹 PI 스타일 */
+  .pi-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
-    margin-top: 20px;
   }
 
-  .team-member {
+  .pi-member {
     display: flex;
     align-items: center;
     gap: 20px;
-    max-width: 700px;
+    max-width: 800px;
   }
 
-  .team-member img {
-    width: 150px;
+  .pi-member img {
+    width: 200px; /* 🔹 교수님 사진 키움 */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 
-  .team-info {
+  .pi-info {
     flex-grow: 1;
     text-align: left;
   }
 
-  .team-info h3 {
+  .pi-info h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 22px;
   }
 
-  .team-info p {
+  .pi-info p {
     margin: 5px 0;
     font-size: 14px;
   }
 
-  .team-info a {
+  .pi-info a {
     color: #007bff;
     text-decoration: none;
   }
 
-  .team-info a:hover {
+  .pi-info a:hover {
     text-decoration: underline;
   }
 
-  .team-bio {
+  .pi-bio {
     margin-top: 10px;
     font-size: 14px;
+  }
+
+  /* 🔹 Team Members 스타일 (사진 아래 이름) */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+  }
+
+  .team-card {
+    text-align: center;
+  }
+
+  .team-card img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-card h4 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .team-card p {
+    font-size: 14px;
+    color: #666;
   }
 </style>
   </section>
