@@ -88,20 +88,29 @@
 
 {% assign data = data | sort: "date" | reverse %}
 
-<!-- 블로그 포스트 리스트 -->
+{% assign emptyarray = "" | split: "," %}
+{% assign data = site.data[include.data]
+  | default: site[include.data]
+  | default: emptyarray
+  | data_filter: include.filter
+%}
+
+{% assign data = data | sort: "date" | reverse %}
+
+<!-- 🔹 블로그 포스트 리스트 출력 -->
 {% for item in site.posts %}
   <article class="blog-post">
-    <!-- 제목 -->
+    <!-- 🔹 제목 -->
     <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
 
-    <!-- 작성자 & 날짜 -->
+    <!-- 🔹 작성자 & 날짜 -->
     <p><strong>By:</strong> {{ item.author }}</p>
     <p><strong>Date:</strong> {{ item.date | date: "%B %d, %Y" }}</p>
 
-    <!-- 본문 요약 -->
+    <!-- 🔹 본문 요약 -->
     <p>{{ item.excerpt }}</p>
 
-    <!-- 갤러리 표시 (선택적) -->
+    <!-- 🔹 갤러리 출력 -->
     {% if item.gallery %}
       <div class="post-gallery">
         {% assign images = item.gallery | split: ", " %}
@@ -111,7 +120,7 @@
       </div>
     {% endif %}
 
-    <!-- 읽기 버튼 -->
+    <!-- 🔹 자세히 보기 버튼 -->
     <a href="{{ item.url | relative_url }}">Read more...</a>
   </article>
 {% endfor %}
