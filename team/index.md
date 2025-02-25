@@ -5,7 +5,7 @@ nav:
   tooltip: About our team
 ---
 
-# {% include icon.html icon="fa-solid fa-users" %}Team
+# {% include icon.html icon="fa-solid fa-users" %} Team
 
 연구실 멤버들을 소개합니다.
 
@@ -13,8 +13,8 @@ nav:
 
 ## Principal Investigator (PI)
 
-{% include team_list.html filter="role == 'pi'" %}
+{% include team_list.html filter="role == 'Associate professor'" %}
 
 ## Team Members
 
-{% include team_list.html filter="role != 'pi'" %}
+{% include team_list.html filter="role != 'Associate professor'" %}
