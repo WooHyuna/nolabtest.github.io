@@ -7,4 +7,23 @@ main {
   flex-grow: 1;
 }
 
-@import "gallery";
+/* 갤러리 스타일 */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.gallery img {
+  width: 180px; /* 기존보다 살짝 줄임 */
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
