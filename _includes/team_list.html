@@ -7,8 +7,16 @@
       <h3>{{ member.name }}</h3>
       <p><strong>{{ member.role }}</strong></p>
       <p>{{ member.description }}</p>
+
       {% if member.links.email %}
         <p>📧 <a href="mailto:{{ member.links.email }}">{{ member.links.email }}</a></p>
+      {% endif %}
+
+      {% if member.bio %}
+        <div class="team-bio">
+          <h4>About</h4>
+          <p>{{ member.bio | markdownify }}</p>
+        </div>
       {% endif %}
     </div>
   {% endfor %}
@@ -51,5 +59,11 @@
 
   .team-member a:hover {
     text-decoration: underline;
+  }
+
+  .team-bio {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
   }
 </style>
