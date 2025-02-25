@@ -5,15 +5,14 @@
   | data_filter: include.filter
 %}
 
+<!-- 🔹 연구실 논문 연도별 정리 -->
 {% assign years = data | group_by_exp: "d", "d.date | date: '%Y'" | sort: "name" | reverse %}
 
 {% for year in years %}
   {% assign data = year.items %}
-
-  {% if years.size > 1 %}
-    <h3 id="{{ year.name }}">{{ year.name }}</h3>
-    {% assign data = data | sort: "date" | reverse %}
-  {% endif %}
+  
+  <h3 id="{{ year.name }}">{{ year.name }}</h3>
+  {% assign data = data | sort: "date" | reverse %}
 
   {% for d in data %}
     {% assign style = d.style | default: include.style %}
@@ -54,22 +53,36 @@
   {% endfor %}
 {% endfor %}
 
-<!-- 🔹 블로그 포스트 리스트 추가 -->
-{% for item in site.posts %}
-  <article class="blog-post">
-    <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
-    <p>{{ item.excerpt }}</p>
+<!-- 🔹 블로그 포스트 연도별 정리 -->
+{% assign blog_years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
 
-    <!-- 🔹 블로그 포스트 내 갤러리 추가 -->
-    {% if item.gallery %}
-      <div class="post-gallery">
-        {% assign images = item.gallery | split: ", " %}
-        {% for img in images limit: 3 %}
-          <img src="{{ img | relative_url }}" alt="Gallery Image">
-        {% endfor %}
-      </div>
-    {% endif %}
+{% for year in blog_years %}
+  <h3 id="blog-{{ year.name }}">{{ year.name }}</h3>
 
-    <a href="{{ item.url | relative_url }}">Read more...</a>
-  </article>
+  {% assign posts = year.items | sort: "date" | reverse %}
+  
+  {% for post in posts %}
+    <article class="blog-post">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+
+      <!-- 🔹 작성자 & 날짜 -->
+      {% if post.author %}
+        <p><strong>By:</strong> {{ post.author }}</p>
+      {% endif %}
+      <p><strong>Date:</strong> {{ post.date | date: "%B %d, %Y" }}</p>
+
+      <!-- 🔹 갤러리 추가 -->
+      {% if post.images %}
+        <div class="post-gallery">
+          {% assign images = post.images | split: ", " %}
+          {% for img in images limit: 3 %}
+            <img src="{{ img | relative_url }}" alt="Gallery Image">
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <a href="{{ post.url | relative_url }}">Read more...</a>
+    </article>
+  {% endfor %}
 {% endfor %}
