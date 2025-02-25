@@ -52,6 +52,33 @@
     %}
   {% endfor %}
 {% endfor %}
+{% assign emptyarray = "" | split: "," %}
+{% assign data = site.data[include.data]
+  | default: site[include.data]
+  | default: emptyarray
+  | data_filter: include.filter
+%}
+
+<!-- 🔹 연구실 논문 연도별 정리 -->
+{% assign years = data | group_by_exp: "d", "d.date | date: '%Y'" | sort: "name" | reverse %}
+
+{% for year in years %}
+  <h3 id="{{ year.name }}">{{ year.name }}</h3>
+  {% assign data = year.items | sort: "date" | reverse %}
+
+  {% for d in data %}
+    {% assign style = d.style | default: include.style %}
+
+    {%
+      include {{ include.component | append: ".html" }}
+      title=d.title
+      authors=d.authors
+      link=d.link
+      journal=d.journal
+      style=style
+    %}
+  {% endfor %}
+{% endfor %}
 
 <!-- 🔹 블로그 포스트 연도별 정리 -->
 {% assign blog_years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
@@ -72,14 +99,9 @@
       {% endif %}
       <p><strong>Date:</strong> {{ post.date | date: "%B %d, %Y" }}</p>
 
-      <!-- 🔹 갤러리 추가 -->
-      {% if post.images %}
-        <div class="post-gallery">
-          {% assign images = post.images | split: ", " %}
-          {% for img in images limit: 3 %}
-            <img src="{{ img | relative_url }}" alt="Gallery Image">
-          {% endfor %}
-        </div>
+      <!-- 🔹 갤러리 표시 -->
+      {% if post.gallery %}
+        {% include gallery.html images=post.gallery %}
       {% endif %}
 
       <a href="{{ post.url | relative_url }}">Read more...</a>
