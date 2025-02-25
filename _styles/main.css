@@ -5,7 +5,7 @@ main {
   flex-grow: 1;
 }
 
-/* 블로그 포스트 스타일 */
+/* 🔹 블로그 포스트 스타일 */
 .blog-post {
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
@@ -22,7 +22,7 @@ main {
   color: #666;
 }
 
-/* 갤러리 스타일 */
+/* 🔹 갤러리 스타일 */
 .post-gallery {
   display: flex;
   flex-wrap: wrap;
