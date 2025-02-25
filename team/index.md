@@ -7,7 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %} Team
 
-Professor, Team members and Alumni
+연구실 멤버들을 소개합니다.
 
 {% include section.html %}
 
