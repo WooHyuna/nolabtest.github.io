@@ -1,0 +1,26 @@
+{% assign emptyarray = "" | split: "," %}
+{% assign data = site.data[include.data]
+  | default: site[include.data]
+  | default: emptyarray
+  | data_filter: include.filter
+%}
+
+{% assign years = data | group_by_exp: "d", "d.year" | sort: "name" | reverse %}
+
+{% for year in years %}
+  <h3 id="{{ year.name }}">{{ year.name }}</h3>
+  {% assign data = year.items | sort: "date" | reverse %}
+
+  {% for d in data %}
+    {% assign style = d.style | default: include.style %}
+
+    {%
+      include citation.html
+      title=d.title
+      authors=d.authors
+      link=d.link
+      journal=d.journal
+      style=style
+    %}
+  {% endfor %}
+{% endfor %}
