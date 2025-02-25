@@ -79,32 +79,39 @@
     %}
   {% endfor %}
 {% endfor %}
+{% assign emptyarray = "" | split: "," %}
+{% assign data = site.data[include.data]
+  | default: site[include.data]
+  | default: emptyarray
+  | data_filter: include.filter
+%}
 
-<!-- 🔹 블로그 포스트 연도별 정리 -->
-{% assign blog_years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+{% assign data = data | sort: "date" | reverse %}
 
-{% for year in blog_years %}
-  <h3 id="blog-{{ year.name }}">{{ year.name }}</h3>
+<!-- 블로그 포스트 리스트 -->
+{% for item in site.posts %}
+  <article class="blog-post">
+    <!-- 제목 -->
+    <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
 
-  {% assign posts = year.items | sort: "date" | reverse %}
-  
-  {% for post in posts %}
-    <article class="blog-post">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
+    <!-- 작성자 & 날짜 -->
+    <p><strong>By:</strong> {{ item.author }}</p>
+    <p><strong>Date:</strong> {{ item.date | date: "%B %d, %Y" }}</p>
 
-      <!-- 🔹 작성자 & 날짜 -->
-      {% if post.author %}
-        <p><strong>By:</strong> {{ post.author }}</p>
-      {% endif %}
-      <p><strong>Date:</strong> {{ post.date | date: "%B %d, %Y" }}</p>
+    <!-- 본문 요약 -->
+    <p>{{ item.excerpt }}</p>
 
-      <!-- 🔹 갤러리 표시 -->
-      {% if post.gallery %}
-        {% include gallery.html images=post.gallery %}
-      {% endif %}
+    <!-- 갤러리 표시 (선택적) -->
+    {% if item.gallery %}
+      <div class="post-gallery">
+        {% assign images = item.gallery | split: ", " %}
+        {% for img in images limit: 3 %}
+          <img src="{{ img | relative_url }}" alt="Gallery Image">
+        {% endfor %}
+      </div>
+    {% endif %}
 
-      <a href="{{ post.url | relative_url }}">Read more...</a>
-    </article>
-  {% endfor %}
+    <!-- 읽기 버튼 -->
+    <a href="{{ item.url | relative_url }}">Read more...</a>
+  </article>
 {% endfor %}
