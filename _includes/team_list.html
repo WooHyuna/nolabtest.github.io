@@ -1,14 +1,55 @@
-{% for member in site.data.members %}
-  {% if include.filter %}
-    {% assign filtered = site.data.members | where_exp: "item", include.filter %}
-  {% else %}
-    {% assign filtered = site.data.members %}
-  {% endif %}
+{% assign members = site.members | where_exp: "member", include.filter %}
 
-  {% for person in filtered %}
+<div class="team-container">
+  {% for member in members %}
     <div class="team-member">
-      <h3>{{ person.name }}</h3>
-      <p>{{ person.role }}</p>
+      <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+      <h3>{{ member.name }}</h3>
+      <p><strong>{{ member.role }}</strong></p>
+      <p>{{ member.description }}</p>
+      {% if member.links.email %}
+        <p>📧 <a href="mailto:{{ member.links.email }}">{{ member.links.email }}</a></p>
+      {% endif %}
     </div>
   {% endfor %}
-{% endfor %}
+</div>
+
+<style>
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .team-member {
+    text-align: center;
+    max-width: 250px;
+  }
+
+  .team-member img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-member h3 {
+    margin: 10px 0 5px;
+  }
+
+  .team-member p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .team-member a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .team-member a:hover {
+    text-decoration: underline;
+  }
+</style>
