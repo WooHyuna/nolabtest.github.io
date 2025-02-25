@@ -7,14 +7,12 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %} Team
 
-연구실 멤버들을 소개합니다.
+Professor, Team members and Alumni
 
 {% include section.html %}
 
 ## Principal Investigator (PI)
-
-{% include team_list.html filter="role == 'Associate professor'" %}
+{% include team_list.html filter="role == 'PI'" %}
 
 ## Team Members
-
-{% include team_list.html filter="role != 'Associate professor'" %}
+{% include team_list.html filter="role != 'PI'" %}
