@@ -1,0 +1,21 @@
+{% for item in site.posts %}
+  <article class="blog-post">
+    <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+
+    <p><strong>By:</strong> {{ item.author }}</p>
+    <p><strong>Date:</strong> {{ item.date | date: "%B %d, %Y" }}</p>
+
+    <p>{{ item.excerpt }}</p>
+
+    {% if item.gallery %}
+      <div class="post-gallery">
+        {% assign images = item.gallery | split: ", " %}
+        {% for img in images limit: 3 %}
+          <img src="{{ '/images/Pictures/' | append: img | relative_url }}" alt="Gallery Image">
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <a href="{{ item.url | relative_url }}">Read more...</a>
+  </article>
+{% endfor %}
