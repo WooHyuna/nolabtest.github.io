@@ -5,72 +5,54 @@
   | data_filter: include.filter
 %}
 
-{% if page.title == "Publications" %}
-  <!-- 🔹 연구실 논문 연도별 정리 -->
-  {% assign years = data | group_by_exp: "d", "d.date | date: '%Y'" | sort: "name" | reverse %}
-  
-  {% for year in years %}
+{% assign years = data
+  | group_by_exp: "d", "d.date | date: '%Y'"
+  | sort: "name"
+  | reverse
+%}
+
+{% for year in years %}
+  {% assign data = year.items %}
+
+  {% if years.size > 1 %}
     <h3 id="{{ year.name }}">{{ year.name }}</h3>
-    {% assign data = year.items | sort: "date" | reverse %}
+    {% assign data = data | sort: "date" | reverse %}
+  {% endif %}
 
-    {% for d in data %}
-      {% assign style = d.style | default: include.style %}
-      {%
-        include {{ include.component | append: ".html" }}
-        title=d.title
-        authors=d.authors
-        link=d.link
-        journal=d.journal
-        style=style
-      %}
-    {% endfor %}
+  {% for d in data %}
+    {% assign style = d.style | default: include.style %}
+
+    {%
+      include {{ include.component | append: ".html" }}
+      affiliation=d.affiliation
+      author=d.author
+      authors=d.authors
+      buttons=d.buttons
+      caption=d.caption
+      content=d.content
+      date=d.date
+      description=d.description
+      excerpt=d.excerpt
+      height=d.height
+      icon=d.icon
+      id=d.id
+      image=d.image
+      last_modified_at=d.last_modified_at
+      link=d.link
+      lookup=d.lookup
+      name=d.name
+      publisher=d.publisher
+      repo=d.repo
+      role=d.role
+      slug=d.slug
+      style=style
+      subtitle=d.subtitle
+      text=d.text
+      title=d.title
+      tooltip=d.tooltip
+      type=d.type
+      url=d.url
+      width=d.width
+    %}
   {% endfor %}
-
-{% elsif page.title == "Blog" %}
-  <!-- 🔹 블로그 포스트 리스트 출력 -->
-  {% for item in site.posts %}
-    <article class="blog-post">
-      <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
-      <p><strong>By:</strong> {{ item.author }}</p>
-      <p><strong>Date:</strong> {{ item.date | date: "%B %d, %Y" }}</p>
-      <p>{{ item.excerpt }}</p>
-
-      {% if item.gallery %}
-        <div class="post-gallery">
-          {% assign images = item.gallery | split: ", " %}
-          {% for img in images limit: 3 %}
-            <img src="{{ '/images/Pictures/' | append: img | relative_url }}" alt="Gallery Image">
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      <a href="{{ item.url | relative_url }}">Read more...</a>
-    </article>
-  {% endfor %}
-
-{% elsif page.title == "Projects" %}
-  <!-- 🔹 프로젝트 리스트 -->
-  {% for project in site.data.projects %}
-    <article class="project-item">
-      <h2>{{ project.title }}</h2>
-      <p>{{ project.description }}</p>
-      {% if project.link %}
-        <a href="{{ project.link }}">Read more...</a>
-      {% endif %}
-    </article>
-  {% endfor %}
-
-{% elsif page.title == "Team" %}
-  <!-- 🔹 연구실 팀원 리스트 -->
-  {% for member in site.data.members %}
-    <div class="team-member">
-      <h3>{{ member.name }}</h3>
-      <p><strong>Role:</strong> {{ member.role }}</p>
-      <p><strong>Email:</strong> {{ member.email }}</p>
-    </div>
-  {% endfor %}
-
-{% else %}
-  <!-- 🔹 기본 출력 (예외 처리) -->
-  <p>No content available.</p>
-{% endif %}
+{% endfor %}
