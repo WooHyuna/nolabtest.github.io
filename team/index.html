@@ -538,72 +538,21 @@
 
 <div class="team-container">
   
-</div>
-
-<style>
-  .team-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .team-member {
-    text-align: center;
-    max-width: 250px;
-  }
-
-  .team-member img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .team-member h3 {
-    margin: 10px 0 5px;
-  }
-
-  .team-member p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-
-  .team-member a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  .team-member a:hover {
-    text-decoration: underline;
-  }
-
-  .team-bio {
-    text-align: left;
-    margin-top: 10px;
-    font-size: 14px;
-  }
-</style>
-
-<h2 id="team-members">Team Members</h2>
-
-<div class="team-container">
-  
     <div class="team-member">
       <img src="/nolabtest.github.io/images/Team/seongjin_noh.JPG" alt="Seong Jin Noh">
-      <h3>Seong Jin Noh</h3>
-      <p><strong>PI</strong></p>
-      <p>Principal Investigator</p>
+      <div class="team-info">
+        <h3>Seong Jin Noh</h3>
+        <p><strong>PI</strong></p>
+        <p>Principal Investigator</p>
 
-      
-        <p>📧 <a href="mailto:seongjin.noh@kumoh.ac.kr">seongjin.noh@kumoh.ac.kr</a></p>
-      
+        
+          <p>📧 <a href="mailto:seongjin.noh@kumoh.ac.kr">seongjin.noh@kumoh.ac.kr</a></p>
+        
 
-      
-        <div class="team-bio">
-          <h4>About</h4>
-          <p></p>
+        
+          <div class="team-bio">
+            <h4>About</h4>
+            <p></p>
 <ul>
   <li>
 <strong>Bachelor</strong>, Seoul National University</li>
@@ -617,43 +566,9 @@
 <strong>수석연구원</strong>, 한국건설기술연구원 (KICT)</li>
 </ul>
 
-        </div>
-      
-    </div>
-  
-    <div class="team-member">
-      <img src="/nolabtest.github.io/images/photo.jpg" alt="Jane Smith">
-      <h3>Jane Smith</h3>
-      <p><strong>principal-investigator</strong></p>
-      <p></p>
-
-      
-
-      
-    </div>
-  
-    <div class="team-member">
-      <img src="/nolabtest.github.io/images/photo.jpg" alt="John Doe">
-      <h3>John Doe</h3>
-      <p><strong>phd</strong></p>
-      <p></p>
-
-      
-
-      
-    </div>
-  
-    <div class="team-member">
-      <img src="/nolabtest.github.io/images/photo.jpg" alt="Sarah Johnson">
-      <h3>Sarah Johnson</h3>
-      <p><strong>programmer</strong></p>
-      <p>Lead Programmer</p>
-
-      
-        <p>📧 <a href="mailto:sarah.johnson@gmail.com">sarah.johnson@gmail.com</a></p>
-      
-
-      
+          </div>
+        
+      </div>
     </div>
   
 </div>
@@ -661,44 +576,151 @@
 <style>
   .team-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
-    justify-content: center;
+    align-items: center;
     margin-top: 20px;
   }
 
   .team-member {
-    text-align: center;
-    max-width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
   }
 
   .team-member img {
-    width: 100%;
-    max-width: 200px;
+    width: 150px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .team-member h3 {
-    margin: 10px 0 5px;
+  .team-info {
+    flex-grow: 1;
+    text-align: left;
   }
 
-  .team-member p {
+  .team-info h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .team-info p {
     margin: 5px 0;
     font-size: 14px;
   }
 
-  .team-member a {
+  .team-info a {
     color: #007bff;
     text-decoration: none;
   }
 
-  .team-member a:hover {
+  .team-info a:hover {
     text-decoration: underline;
   }
 
   .team-bio {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+</style>
+
+<h2 id="team-members">Team Members</h2>
+
+<div class="team-container">
+  
+    <div class="team-member">
+      <img src="/nolabtest.github.io/images/photo.jpg" alt="Jane Smith">
+      <div class="team-info">
+        <h3>Jane Smith</h3>
+        <p><strong>principal-investigator</strong></p>
+        <p></p>
+
+        
+
+        
+      </div>
+    </div>
+  
+    <div class="team-member">
+      <img src="/nolabtest.github.io/images/photo.jpg" alt="John Doe">
+      <div class="team-info">
+        <h3>John Doe</h3>
+        <p><strong>phd</strong></p>
+        <p></p>
+
+        
+
+        
+      </div>
+    </div>
+  
+    <div class="team-member">
+      <img src="/nolabtest.github.io/images/photo.jpg" alt="Sarah Johnson">
+      <div class="team-info">
+        <h3>Sarah Johnson</h3>
+        <p><strong>programmer</strong></p>
+        <p>Lead Programmer</p>
+
+        
+          <p>📧 <a href="mailto:sarah.johnson@gmail.com">sarah.johnson@gmail.com</a></p>
+        
+
+        
+      </div>
+    </div>
+  
+</div>
+
+<style>
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .team-member {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+  }
+
+  .team-member img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-info {
+    flex-grow: 1;
     text-align: left;
+  }
+
+  .team-info h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .team-info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .team-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .team-info a:hover {
+    text-decoration: underline;
+  }
+
+  .team-bio {
     margin-top: 10px;
     font-size: 14px;
   }
