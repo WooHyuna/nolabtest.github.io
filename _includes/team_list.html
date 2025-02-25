@@ -1,0 +1,14 @@
+{% for member in site.data.members %}
+  {% if include.filter %}
+    {% assign filtered = site.data.members | where_exp: "item", include.filter %}
+  {% else %}
+    {% assign filtered = site.data.members %}
+  {% endif %}
+
+  {% for person in filtered %}
+    <div class="team-member">
+      <h3>{{ person.name }}</h3>
+      <p>{{ person.role }}</p>
+    </div>
+  {% endfor %}
+{% endfor %}
