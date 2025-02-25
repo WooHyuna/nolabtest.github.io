@@ -4,20 +4,22 @@
   {% for member in members %}
     <div class="team-member">
       <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
-      <h3>{{ member.name }}</h3>
-      <p><strong>{{ member.role }}</strong></p>
-      <p>{{ member.description }}</p>
+      <div class="team-info">
+        <h3>{{ member.name }}</h3>
+        <p><strong>{{ member.role }}</strong></p>
+        <p>{{ member.description }}</p>
 
-      {% if member.links.email %}
-        <p>📧 <a href="mailto:{{ member.links.email }}">{{ member.links.email }}</a></p>
-      {% endif %}
+        {% if member.links.email %}
+          <p>📧 <a href="mailto:{{ member.links.email }}">{{ member.links.email }}</a></p>
+        {% endif %}
 
-      {% if member.bio %}
-        <div class="team-bio">
-          <h4>About</h4>
-          <p>{{ member.bio | markdownify }}</p>
-        </div>
-      {% endif %}
+        {% if member.bio %}
+          <div class="team-bio">
+            <h4>About</h4>
+            <p>{{ member.bio | markdownify }}</p>
+          </div>
+        {% endif %}
+      </div>
     </div>
   {% endfor %}
 </div>
@@ -25,44 +27,51 @@
 <style>
   .team-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
-    justify-content: center;
+    align-items: center;
     margin-top: 20px;
   }
 
   .team-member {
-    text-align: center;
-    max-width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
   }
 
   .team-member img {
-    width: 100%;
-    max-width: 200px;
+    width: 150px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .team-member h3 {
-    margin: 10px 0 5px;
+  .team-info {
+    flex-grow: 1;
+    text-align: left;
   }
 
-  .team-member p {
+  .team-info h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .team-info p {
     margin: 5px 0;
     font-size: 14px;
   }
 
-  .team-member a {
+  .team-info a {
     color: #007bff;
     text-decoration: none;
   }
 
-  .team-member a:hover {
+  .team-info a:hover {
     text-decoration: underline;
   }
 
   .team-bio {
-    text-align: left;
     margin-top: 10px;
     font-size: 14px;
   }
